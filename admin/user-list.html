@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>        
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>D-Tracks - 광고제작물 아카이브</title>
+		<meta name="description" content="D-Tracks - 광고제작물 아카이브">
+		<meta name="author" content="minks">
+		<link rel="shortcut icon" href="../img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="../img/logo-favicon.ico">
+		
+		<link href="../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui-timepicker-addon.css" type="text/css" rel="stylesheet">
+        <link href="../css/admin-common.css" type="text/css" rel="stylesheet">
+		<link href="../css/admin-main.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+        <script src="../js/slick.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery-ui-sortable.js"></script>
+        <script src="../js/jquery-ui-timepicker-addon.js"></script>
+		<script src="../js/datepicker-ko.js"></script>
+        <script src="../js/lottie-player.js"></script>
+        <script src="../js/admin-function.js"></script>
+	</head>
+
+	<body>
+        <div class="wrap">
+            <!-- loading -->
+            <div class="loading-area">
+                <img src="../img/loading-img.gif" alt="로딩이미지" class="loading-img">
+            </div>
+            
+            <!-- header -->
+            <header class="header">
+                <h1 class="not-view">header</h1>
+                
+                <div class="h-main-area">
+                    <div class="center-ct">
+                        <div class="h-main-logo">
+                            <a href="user-list.html"><img src="../img/logo.png" alt="로고"></a>
+                        </div>
+                        
+                        <ul class="h-main-menu cf">
+                            <li>
+                                <a href="javascript:void(0);" class="myinfo-btn on">관리자님</a>
+                            </li>
+                            <li>
+                                <button type="button" class="c-default-btn03 sync-btn" onclick="location.reload();">
+                                    <span>동기화</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="c-default-btn01 logout-btn" onclick="location.href='login.html';">
+                                    <span>로그아웃</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-list -->
+                <section class="c-list">
+                    <div class="center-ct">
+                        <ul class="c-tab-area">
+                            <li class="on">
+                                <a href="user-list.html">사용자 관리</a>
+                            </li>
+                            <li>
+                                <a href="code-list.html">분류코드 관리</a>
+                            </li>
+                            <li>
+                                <a href="info-record-list.html">개인정보 처리이력</a>
+                            </li>
+                            <li>
+                                <a href="work-record-list.html">작업이력</a>
+                            </li>
+                        </ul>
+
+                        <div class="c-list-area">
+                            <div class="c-list-top">
+                                <div class="tit">사용자 관리</div>
+                                <div class="search-and-btn">
+                                    <form id="" name="" method="" action="">
+                                        <button type="button" class="c-default-btn06 insert-btn" onclick="openUserInsertLayer(this);">
+                                            <span>독립계정 등록</span>
+                                        </button>
+                                        <select id="" name="">
+                                            <option value="">전체</option>
+                                            <option value="아이디">아이디</option>
+                                            <option value="부서">부서</option>
+                                            <option value="이름">이름</option>
+                                            <option value="이메일">이메일</option>
+                                            <option value="계정종류">계정종류</option>
+                                            <option value="권한">권한</option>
+                                        </select>
+                                        <div class="c-search-area">
+                                            <input type="text" id="" name="" class="c-search-input" placeholder="Search...">
+                                        </div>
+                                        <input type="button" class="search-btn01" value="검색" onclick="">
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="c-list-main">
+                                <!-- c-list-header-table : 리스트 header 테이블 -->
+                                <div class="c-list-table-area c-list-header-table">
+                                    <table class="c-list-table">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="*">
+                                            <col width="*">
+                                            <col width="*">
+                                            <col width="20%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="12%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>아이디</th>
+                                                <th>부서</th>
+                                                <th>이름</th>
+                                                <th>이메일</th>
+                                                <th>계정종류</th>
+                                                <th>권한</th>
+                                                <th>관리</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                
+                                <!-- c-list-body-table : 리스트 body 테이블 -->
+                                <div class="c-list-table-area c-list-body-table">
+                                    <table class="c-list-table">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="*">
+                                            <col width="*">
+                                            <col width="*">
+                                            <col width="20%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="12%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="c-highlight">10</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">임직원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>일반계정</td>
+                                                <td>관리자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">9</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">외부심사위원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>독립계정</td>
+                                                <td>일반사용자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">8</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">내부심사위원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>독립계정</td>
+                                                <td>심사위원</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">7</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">임직원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>일반계정</td>
+                                                <td>AD등록자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">6</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">영상관리자</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>일반계정</td>
+                                                <td>관리자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">5</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">영상관리자</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>독립계정</td>
+                                                <td>일반사용자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">4</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">임직원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>독립계정</td>
+                                                <td>심사위원</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">3</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">임직원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>일반계정</td>
+                                                <td>AD등록자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">2</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">임직원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>독립계정</td>
+                                                <td>일반사용자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">1</td>
+                                                <td class="c-left">test101010</td>
+                                                <td>부서명</td>
+                                                <td class="c-highlight2">임직원</td>
+                                                <td>test9999@test.co.kr</td>
+                                                <td>일반계정</td>
+                                                <td>관리자</td>
+                                                <td>
+                                                    <button type="button" class="modify-btn01" onclick="openUserModifyLayer(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="delete-btn01" onclick="openLayer('confirm','정말 삭제하시겠습니까?','');">
+                                                        <span></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="c-list-paging-area">
+                                    <ul class="c-list-paging">
+                                        <li class="arrow first-arrow disabled">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="arrow prev-arrow disabled">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="on">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">5</a>
+                                        </li>
+                                        <li class="arrow next-arrow">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="arrow last-arrow disabled">
+                                            <a href="#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- scrollup -->
+            <div class="scrollup-area"></div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn04 close-btn" onclick="closeLayer(this);">
+                                <span>취 소</span>
+                            </button>
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- alarm창 -->
+                <div class="l-area" id="alarm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con-tit-area">
+                                <button type="button" class="l-con-tit-btn" onclick="closeLayer(this);">
+                                    <span><img src="../img/close-btn3.png" alt="레이어닫기"></span>
+                                </button>
+                            </div>
+                            <div class="l-default-con"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 독립계정 등록창 -->
+                <div class="l-area l-admin-area" id="user-insert-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <div class="l-tit">독립계정 등록</div>
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn4.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-admin-con">
+                                <div class="l-admin-table-area">
+                                    <table class="l-admin-table">
+                                        <colgroup>
+                                            <col width="96">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>아이디</th>
+                                                <td class="c-left">
+                                                    <!-- c-inline-input : 텍스트박스 + 버튼일 경우 -->
+                                                    <div class="c-inline-input">
+                                                        <input type="text" id="" name="">
+                                                        <button type="button" class="c-default-btn16" onclick="">
+                                                            <span>중복확인</span>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비밀번호</th>
+                                                <td class="c-left"><input type="password" id="" name=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>부서</th>
+                                                <td class="c-left"><input type="text" id="" name=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>이름</th>
+                                                <td class="c-left"><input type="text" id="" name=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>이메일</th>
+                                                <td class="c-left"><input type="email" id="" name=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정종류</th>
+                                                <td class="c-left">
+                                                    <div class="td-txt">독립계정</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정속성1</th>
+                                                <td class="c-left"><input type="text" id="" name=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정속성2</th>
+                                                <td class="c-left"><input type="text" id="" name=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정속성3</th>
+                                                <td class="c-left"><input type="text" id="" name=""></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-default-btn06 insert-btn" onclick="">
+                                <span>등록</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 사용자계정 수정창 -->
+                <div class="l-area l-admin-area" id="user-modify-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <div class="l-tit">사용자계정 수정</div>
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn4.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-admin-con">
+                                <div class="l-admin-table-area">
+                                    <table class="l-admin-table">
+                                        <colgroup>
+                                            <col width="96">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>아이디</th>
+                                                <td class="c-left">
+                                                    <div class="td-txt">test9999</div>
+                                                </td>
+                                            </tr>
+                                            <!-- 비밀번호 항목은 독립계정일 경우에만 노출 -->
+                                            <tr>
+                                                <th>비밀번호</th>
+                                                <td class="c-left">
+                                                    <button type="button" class="c-default-btn10 reset-btn" onclick="">
+                                                        <span>비밀번호 초기화</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>부서</th>
+                                                <td class="c-left"><input type="text" id="" name="" value="부서명"></td>
+                                            </tr>
+                                            <!-- 사번 항목은 일반계정일 경우에만 노출 -->
+                                            <tr>
+                                                <th>사번</th>
+                                                <td class="c-left"><input type="text" id="" name="" value="00152563"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>이름</th>
+                                                <td class="c-left"><input type="text" id="" name="" value="외부심사위원"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>이메일</th>
+                                                <td class="c-left"><input type="email" id="" name="" value="test9999@test.co.kr"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정종류</th>
+                                                <td class="c-left">
+                                                    <div class="td-txt">일반계정</div>
+                                                </td>
+                                            </tr>
+                                            <!-- 권한 항목은 일반계정일 경우에만 노출 -->
+                                            <tr>
+                                                <th>권한</th>
+                                                <td class="c-left">
+                                                    <select id="" name="">
+                                                        <option value="관리자">관리자</option>
+                                                        <option value="AD등록자">AD등록자</option>
+                                                        <option value="일반사용자">일반사용자</option>
+                                                        <option value="심사위원">심사위원</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <!-- IP 항목은 일반계정일 경우에만 노출 -->
+                                            <tr>
+                                                <th>IP</th>
+                                                <td class="c-left">
+                                                    <input type="text" id="" name="" value="123.25.0.1,123.52.0.2">
+                                                    <div class="td-explain">콤마(,) 후 IP를 추가해주세요.</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정속성1</th>
+                                                <td class="c-left"><input type="text" id="" name="" value="학생"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정속성2</th>
+                                                <td class="c-left"><input type="text" id="" name="" value="교수"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계정속성3</th>
+                                                <td class="c-left"><input type="text" id="" name="" value="임직원"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-default-btn08 modify-btn" onclick="">
+                                <span>수정</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+            </div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>        
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>D-Tracks - 광고제작물 아카이브</title>
+		<meta name="description" content="D-Tracks - 광고제작물 아카이브">
+		<meta name="author" content="minks">
+		<link rel="shortcut icon" href="../img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="../img/logo-favicon.ico">
+		
+		<link href="../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui-timepicker-addon.css" type="text/css" rel="stylesheet">
+        <link href="../css/admin-common.css" type="text/css" rel="stylesheet">
+		<link href="../css/admin-main.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+        <script src="../js/slick.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery-ui-sortable.js"></script>
+        <script src="../js/jquery-ui-timepicker-addon.js"></script>
+		<script src="../js/datepicker-ko.js"></script>
+        <script src="../js/lottie-player.js"></script>
+        <script src="../js/admin-function.js"></script>
+	</head>
+
+	<body>
+        <div class="wrap">
+            <!-- loading -->
+            <div class="loading-area">
+                <img src="../img/loading-img.gif" alt="로딩이미지" class="loading-img">
+            </div>
+            
+            <!-- header -->
+            <header class="header">
+                <h1 class="not-view">header</h1>
+                
+                <div class="h-main-area">
+                    <div class="center-ct">
+                        <div class="h-main-logo">
+                            <a href="user-list.html"><img src="../img/logo.png" alt="로고"></a>
+                        </div>
+                        
+                        <ul class="h-main-menu cf">
+                            <li>
+                                <a href="javascript:void(0);" class="myinfo-btn on">관리자님</a>
+                            </li>
+                            <li>
+                                <button type="button" class="c-default-btn03 sync-btn" onclick="location.reload();">
+                                    <span>동기화</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="c-default-btn01 logout-btn" onclick="location.href='login.html';">
+                                    <span>로그아웃</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-list -->
+                <section class="c-list">
+                    <div class="center-ct">
+                        <ul class="c-tab-area">
+                            <li>
+                                <a href="user-list.html">사용자 관리</a>
+                            </li>
+                            <li>
+                                <a href="code-list.html">분류코드 관리</a>
+                            </li>
+                            <li class="on">
+                                <a href="info-record-list.html">개인정보 처리이력</a>
+                            </li>
+                            <li>
+                                <a href="work-record-list.html">작업이력</a>
+                            </li>
+                        </ul>
+
+                        <div class="c-list-area">
+                            <div class="c-list-top">
+                                <div class="tit">개인정보 처리이력</div>
+                            </div>
+                            
+                            <div class="c-list-main">
+                                <div class="c-list-search-area">
+                                    <div class="c-list-search-bundle">
+                                        <div class="c-list-search-item">
+                                            <div class="tit">기간</div>
+                                            <div class="con">
+                                                <input type="text" id="" name="" class="c-date-input" readonly placeholder="시작일자" autocomplete="off">
+                                                <span class="split">~</span>
+                                                <input type="text" id="" name="" class="c-date-input" readonly placeholder="종료일자" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <!-- full-item : 검색영역을 꽉채울 경우 추가 -->
+                                        <div class="c-list-search-item full-item">
+                                            <div class="tit">검색</div>
+                                            <div class="con">
+                                                <input type="text" id="" name="" placeholder="검색어">
+                                            </div>
+                                        </div>
+                                        <div class="c-list-search-btn">
+                                            <button type="button" class="c-default-btn08 search-btn" onclick="">
+                                                <span>검색</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- c-list-header-table : 리스트 header 테이블 -->
+                                <div class="c-list-table-area c-list-header-table">
+                                    <table class="c-list-table">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="*">
+                                            <col width="10%">
+                                            <col width="15%">
+                                            <col width="20%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>내용</th>
+                                                <th>처리 아이디</th>
+                                                <th>처리 IP</th>
+                                                <th>처리일자</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                
+                                <!-- c-list-body-table : 리스트 body 테이블 -->
+                                <div class="c-list-table-area c-list-body-table">
+                                    <table class="c-list-table">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="*">
+                                            <col width="10%">
+                                            <col width="15%">
+                                            <col width="20%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="c-highlight">10</td>
+                                                <td class="c-left">test5555 권한 수정</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">9</td>
+                                                <td class="c-left">test1111 권한 수정</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">8</td>
+                                                <td class="c-left">test3333 독립계정 삭제</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">7</td>
+                                                <td class="c-left">test3333 독립계정 비밀번호 초기화</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">6</td>
+                                                <td class="c-left">test3333 독립계정 수정</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">5</td>
+                                                <td class="c-left">test7777 권한 수정</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">4</td>
+                                                <td class="c-left">test1111 권한 수정</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">3</td>
+                                                <td class="c-left">test3333 독립계정 삭제</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">2</td>
+                                                <td class="c-left">test3333 독립계정 비밀번호 초기화</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="c-highlight">1</td>
+                                                <td class="c-left">test3333 독립계정 수정</td>
+                                                <td class="c-highlight2">test0000</td>
+                                                <td>125.2.25.120.1</td>
+                                                <td>2022-08-11 00:00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="c-list-paging-area">
+                                    <ul class="c-list-paging">
+                                        <li class="arrow first-arrow disabled">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="arrow prev-arrow disabled">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="on">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">5</a>
+                                        </li>
+                                        <li class="arrow next-arrow">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="arrow last-arrow disabled">
+                                            <a href="#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- scrollup -->
+            <div class="scrollup-area"></div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn04 close-btn" onclick="closeLayer(this);">
+                                <span>취 소</span>
+                            </button>
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- alarm창 -->
+                <div class="l-area" id="alarm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con-tit-area">
+                                <button type="button" class="l-con-tit-btn" onclick="closeLayer(this);">
+                                    <span><img src="../img/close-btn3.png" alt="레이어닫기"></span>
+                                </button>
+                            </div>
+                            <div class="l-default-con"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+            </div>
+        </div>
+	</body>
+</html>
