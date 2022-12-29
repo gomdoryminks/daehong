@@ -1,1 +1,1496 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>        
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>D-Tracks - 광고제작물 아카이브</title>
+		<meta name="description" content="D-Tracks - 광고제작물 아카이브">
+		<meta name="author" content="minks">
+		<link rel="shortcut icon" href="../img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="../img/logo-favicon.ico">
+		
+		<link href="../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui-timepicker-addon.css" type="text/css" rel="stylesheet">
+        <link href="../css/member-common.css" type="text/css" rel="stylesheet">
+		<link href="../css/member-main.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+        <script src="../js/slick.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery-ui-sortable.js"></script>
+        <script src="../js/jquery-ui-timepicker-addon.js"></script>
+		<script src="../js/datepicker-ko.js"></script>
+        <script src="../js/lottie-player.js"></script>
+        <script src="../js/member-function.js"></script>
+	</head>
 
+	<body>
+        <div class="wrap">
+            <!-- loading -->
+            <div class="loading-area">
+                <img src="../img/loading-img.gif" alt="로딩이미지" class="loading-img">
+            </div>
+            
+            <!-- header -->
+            <header class="header">
+                <h1 class="not-view">header</h1>
+                
+                <div class="h-main-area">
+                    <div class="center-ct">
+                        <div class="h-main-logo">
+                            <a href="index.html"><img src="../img/logo.png" alt="로고"></a>
+                        </div>
+                        
+                        <div class="h-main-search">
+                            <form id="" name="" method="" action="">
+                                <input type="text" id="" name="" class="h-main-search-input" placeholder="실시간 HOT 영상">
+                                <input type="button" class="h-main-search-btn" value="검색" onclick="location.href='ad-list.html';">
+                            </form>
+                        </div>
+                        
+                        <ul class="h-main-menu cf">
+                            <li>
+                                <a href="ad-library-list.html">AD라이브러리</a>
+                            </li>
+                            <li>
+                                <a href="evaluation-list.html">심사평가</a>
+                            </li>
+                            <li>
+                                <a href="attention-list.html">관심영상</a>
+                            </li>
+                            <li>
+                                <a href="myinfo.html" class="myinfo-btn on">내정보</a>
+                            </li>
+                            <li>
+                                <button type="button" class="c-default-btn01 logout-btn" onclick="location.href='login.html';">
+                                    <span>로그아웃</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-main : 메인페이지 -->
+                <section class="c-main">
+                    <!-- 상단 배너 영상 -->
+                    <article class="main-top-area">
+                        <div class="center-ct">
+                            <div class="swiper-container main-top-slide">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div class="main-top-txt">
+                                            <div class="big">투자. 쉽게. 알아서.</div>
+                                            <div class="medium">[ 디셈버앤컴퍼니자산운용 ] 핀트</div>
+                                            <div class="small">
+                                                CD : 최우식<br>
+                                                AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                감독 : 봉준호<br>
+                                                프로덕션 :  롯데 studio<br>
+                                                EPD : Lotte disital 
+                                            </div>
+                                            <button type="button" class="c-large-btn01 play-btn" onclick="location.href='ad-detail.html';">
+                                                <span>영상 보기</span>
+                                            </button>
+                                        </div>
+                                        <div class="main-top-img" style="background-image: url('../img/main-top-img1.png');"></div>
+                                        <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                        <button type="button" class="play-btn01" data-type="image" data-href="video-img.png" onclick="openPlayLayer(this);">
+                                            <span></span>
+                                        </button>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="main-top-txt">
+                                            <div class="big">오늘도 잼있는 가족생활</div>
+                                            <div class="medium">[ 세라젬 ] 세라젬 마스터 V6</div>
+                                            <div class="small">
+                                                CD : 최우식<br>
+                                                AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                감독 : 봉준호<br>
+                                                프로덕션 :  롯데 studio<br>
+                                                EPD : Lotte disital 
+                                            </div>
+                                            <button type="button" class="c-large-btn01 play-btn" onclick="location.href='ad-detail2.html';">
+                                                <span>영상 보기</span>
+                                            </button>
+                                        </div>
+                                        <div class="main-top-img" style="background-image: url('../img/main-top-img2.png');"></div>
+                                        <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                        <button type="button" class="play-btn01" data-type="image" data-href="video-img.png" onclick="openPlayLayer(this);">
+                                            <span></span>
+                                        </button>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="main-top-txt">
+                                            <div class="big">
+                                                나누고 싶은게 많은,<br>
+                                                요즘 시대의 커핀 편
+                                            </div>
+                                            <div class="medium">[ 롯데칠성음료 ] 칸타타</div>
+                                            <div class="small">
+                                                CD : 최우식<br>
+                                                AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                감독 : 봉준호<br>
+                                                프로덕션 :  롯데 studio<br>
+                                                EPD : Lotte disital 
+                                            </div>
+                                            <button type="button" class="c-large-btn01 play-btn" onclick="location.href='ad-detail.html';">
+                                                <span>영상 보기</span>
+                                            </button>
+                                        </div>
+                                        <div class="main-top-img" style="background-image: url('../img/main-top-img3.png');"></div>
+                                        <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                        <button type="button" class="play-btn01" data-type="video" data-href="1.mp4" onclick="openPlayLayer(this);">
+                                            <span></span>
+                                        </button>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="main-top-txt">
+                                            <div class="big">투자. 쉽게. 알아서.</div>
+                                            <div class="medium">[ 디셈버앤컴퍼니자산운용 ] 핀트</div>
+                                            <div class="small">
+                                                CD : 최우식<br>
+                                                AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                감독 : 봉준호<br>
+                                                프로덕션 :  롯데 studio<br>
+                                                EPD : Lotte disital 
+                                            </div>
+                                            <button type="button" class="c-large-btn01 play-btn" onclick="location.href='ad-detail2.html';">
+                                                <span>영상 보기</span>
+                                            </button>
+                                        </div>
+                                        <div class="main-top-img" style="background-image: url('../img/main-top-img1.png');"></div>
+                                        <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                        <button type="button" class="play-btn01" data-type="video" data-href="2.mp4" onclick="openPlayLayer(this);">
+                                            <span></span>
+                                        </button>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="main-top-txt">
+                                            <div class="big">오늘도 잼있는 가족생활</div>
+                                            <div class="medium">[ 세라젬 ] 세라젬 마스터 V6</div>
+                                            <div class="small">
+                                                CD : 최우식<br>
+                                                AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                감독 : 봉준호<br>
+                                                프로덕션 :  롯데 studio<br>
+                                                EPD : Lotte disital 
+                                            </div>
+                                            <button type="button" class="c-large-btn01 play-btn" onclick="location.href='ad-detail.html';">
+                                                <span>영상 보기</span>
+                                            </button>
+                                        </div>
+                                        <div class="main-top-img" style="background-image: url('../img/main-top-img2.png');"></div>
+                                        <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                        <button type="button" class="play-btn01" data-type="video" data-href="3.mp4" onclick="openPlayLayer(this);">
+                                            <span></span>
+                                        </button>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="main-top-txt">
+                                            <div class="big">
+                                                나누고 싶은게 많은,<br>
+                                                요즘 시대의 커핀 편
+                                            </div>
+                                            <div class="medium">[ 롯데칠성음료 ] 칸타타</div>
+                                            <div class="small">
+                                                CD : 최우식<br>
+                                                AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                감독 : 봉준호<br>
+                                                프로덕션 :  롯데 studio<br>
+                                                EPD : Lotte disital 
+                                            </div>
+                                            <button type="button" class="c-large-btn01 play-btn" onclick="location.href='ad-detail2.html';">
+                                                <span>영상 보기</span>
+                                            </button>
+                                        </div>
+                                        <div class="main-top-img" style="background-image: url('../img/main-top-img3.png');"></div>
+                                        <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                        <button type="button" class="play-btn01" data-type="video" data-href="4.mp4" onclick="openPlayLayer(this);">
+                                            <span></span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="main-top-arrow-area">
+                                    <div class="main-top-prev-arrow"></div>
+                                    <div class="main-top-next-arrow"></div>
+                                </div>
+                                <div class="main-top-pagination"></div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 업종별 포트폴리오 -->
+                    <article class="main-business-area">
+                        <div class="center-ct">
+                            <div class="main-list-top">
+                                <div class="tit">업종별 포트폴리오</div>
+                            </div>
+                            <div class="swiper-container main-business-slide">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img1.png');"></div>
+                                            <div class="main-business-txt"># 금융</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img2.png');"></div>
+                                            <div class="main-business-txt"># 기업PR/정부·공공기관</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img3.png');"></div>
+                                            <div class="main-business-txt"># IT·정보통신 / 서비스</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img4.png');"></div>
+                                            <div class="main-business-txt"># 패션·뷰티 / 생활용품</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img5.png');"></div>
+                                            <div class="main-business-txt"># 가전 / 전자</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img6.png');"></div>
+                                            <div class="main-business-txt"># 식음료 / 제약</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img7.png');"></div>
+                                            <div class="main-business-txt"># 자동차 / 건설</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img8.png');"></div>
+                                            <div class="main-business-txt"># 유통 / 기타</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img9.png');"></div>
+                                            <div class="main-business-txt"># PROMOTION</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img10.png');"></div>
+                                            <div class="main-business-txt"># 공공마케팅</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img11.png');"></div>
+                                            <div class="main-business-txt"># SPACE MARKETING</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img12.png');"></div>
+                                            <div class="main-business-txt"># DESIGN MARKETING</div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="business-list2.html">
+                                            <div class="main-business-img" style="background-image: url('../img/main-business-img13.png');"></div>
+                                            <div class="main-business-txt"># SPORTS MARKETING</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 최신 프로젝트 -->
+                    <article class="main-latest-area">
+                        <div class="center-ct">
+                            <div class="main-list-top">
+                                <div class="tit">최신 프로젝트</div>
+                                <button type="button" class="c-default-btn04 more-btn" onclick="location.href='latest-list.html';">
+                                    <span>더보기</span>
+                                </button>
+                            </div>
+                            <div class="main-latest-slide-area">
+                                <div class="main-latest-slide">
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img1.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[멕시카나치킨] 달콤라떼 치킨</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img2.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데칠성음료] 홈파티 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img3.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데GRS] 치즈 No.5-원반 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img4.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[클래스101] 세상의 모든 클래스 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img5.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데] 오늘을 이롭게 내일을 새롭게</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img6.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데칠성음료] 푸드페어링 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img6.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데칠성음료] 푸드페어링 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img5.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데] 오늘을 이롭게 내일을 새롭게</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img4.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[클래스101] 세상의 모든 클래스 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img3.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데GRS] 치즈 No.5-원반 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img2.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[롯데칠성음료] 홈파티 편</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-latest-item">
+                                        <div class="main-latest-img" style="background-image: url('../img/main-latest-img1.png');">
+                                            <button type="button" class="attention-btn01" onclick="setAttention(this);">
+                                                <span></span>
+                                            </button>
+                                            <div class="main-latest-txt">
+                                                <a href="ad-detail.html">
+                                                    <div class="big">[멕시카나치킨] 달콤라떼 치킨</div>
+                                                    <div class="small">
+                                                        CD : 최우식, AE : 송상현, 김혜원, 곽유난, 배재현<br>
+                                                        감독 : 봉준호, 프로덕션 :  롯데 studio<br>
+                                                        EPD : Lotte disital 
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 이슈 크리에이티브 -->
+                    <article class="main-issue-area">
+                        <div class="center-ct">
+                            <div class="main-list-top">
+                                <div class="tit">이슈 크리에이티브</div>
+                                <button type="button" class="c-default-btn04 more-btn" onclick="location.href='issue-list.html';">
+                                    <span>더보기</span>
+                                </button>
+                            </div>
+                            <div class="main-issue-con">
+                                <div class="main-issue-best">
+                                    <!--<div class="main-issue-best-img" style="background-image: url('../img/main-issue-img1.png');"></div>
+                                    <div class="main-issue-best-txt">
+                                        <div class="big">ISSUE Creative!</div>
+                                        <div class="small">
+                                            광고어워드에서 주목받은  크리에이티브<br>
+                                            영상을 볼 수 있는 섹션입니다
+                                        </div>
+                                        <button type="button" class="c-long-btn02 play-btn" onclick="location.href='ad-detail.html';">
+                                            <span>Watch Now</span>
+                                        </button>
+                                    </div>-->
+                                </div>
+                                <div class="main-issue-slide-area">
+                                    <div class="c-ad-list main-issue-slide">
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img2.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">원스토어</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">원하면 달라지는 앱생활</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img3.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데칠성음료</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">요즘 제일 탐나는 제로편</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img4.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">오늘을 이롭게 내일을 새롭게...</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img5.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">KT</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">아이의 인터넷 사용시간 관리가...</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img6.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">원스토어</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">원스맨 아카데미 졸업편</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img7.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">오새내이 콜라주</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img8.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데주류</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">생맥맛집</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img9.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데하이마트</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">컴ON 집콕대전</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img9.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데하이마트</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">컴ON 집콕대전</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img8.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데주류</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">생맥맛집</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img7.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">오새내이 콜라주</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img6.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">원스토어</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">원스맨 아카데미 졸업편</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img5.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">KT</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">아이의 인터넷 사용시간 관리가...</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img4.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">오늘을 이롭게 내일을 새롭게...</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img3.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">롯데칠성음료</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">요즘 제일 탐나는 제로편</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-ad-item-area">
+                                            <div class="c-ad-item">
+                                                <div class="c-ad-img" style="background-image: url('../img/main-issue-img2.png');">
+                                                    <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                        <span></span>
+                                                    </button>
+                                                    <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="c-ad-icon">
+                                                        <img src="../img/trophy-icon2.png" alt="이슈아이콘">
+                                                    </div>
+                                                </div>
+                                                <div class="c-ad-txt">
+                                                    <div class="c-ad-txt-tit">원스토어</div>
+                                                    <div class="c-ad-txt-con">
+                                                        <div class="caption">원하면 달라지는 앱생활</div>
+                                                        <div class="attention"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 브랜드 컨텐츠 영상 -->
+                    <article class="main-brand-area">
+                        <div class="center-ct">
+                            <div class="main-list-top">
+                                <div class="tit">브랜드 컨텐츠 영상</div>
+                                <button type="button" class="c-default-btn05 more-btn" onclick="location.href='brand-list.html';">
+                                    <span>더보기</span>
+                                </button>
+                            </div>
+                            <div class="main-brand-slide-area">
+                                <div class="c-ad-list main-brand-slide">
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img1.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img2.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img3.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img4.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img5.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img6.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img7.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img8.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img9.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img10.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img11.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img12.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img12.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img11.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img10.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img9.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img8.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img7.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img6.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img5.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img4.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img3.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img2.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-ad-item-area">
+                                        <div class="c-ad-item">
+                                            <div class="c-ad-img" style="background-image: url('../img/main-brand-img1.png');">
+                                                <button type="button" class="attention-btn02" onclick="setAttention(this);">
+                                                    <span></span>
+                                                </button>
+                                                <button type="button" class="play-btn02" onclick="location.href='ad-detail.html';">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="c-ad-txt">
+                                                <div class="c-ad-txt-tit">타이틀타이틀타이틀</div>
+                                                <div class="c-ad-txt-con">
+                                                    <div class="caption">타이틀타이틀타이틀</div>
+                                                    <div class="attention"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+            
+            <!-- footer -->
+            <footer class="footer">
+                <h1 class="not-view">footer</h1>
+                
+                <div class="f-main-area">
+                    <div class="center-ct">
+                        <div class="f-main-info">
+                            (주)대홍기획 서울특별시 중구 통일로 10 연세세브란스빌딩 7~9층, 13층 신규광고문의 : 02.3671.6487 기타문의 : 02.3671.6114<br>
+                            © 2022 Daehong Communications INC. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+            <!-- scrollup -->
+            <div class="scrollup-area"></div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn04 close-btn" onclick="closeLayer(this);">
+                                <span>취 소</span>
+                            </button>
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- alarm창 -->
+                <div class="l-area" id="alarm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con-tit-area">
+                                <button type="button" class="l-con-tit-btn" onclick="closeLayer(this);">
+                                    <span><img src="../img/close-btn3.png" alt="레이어닫기"></span>
+                                </button>
+                            </div>
+                            <div class="l-default-con"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 영상재생창 -->
+                <div class="l-area l-full-area" id="play-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-play-con"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+            </div>
+        </div>
+	</body>
+</html>

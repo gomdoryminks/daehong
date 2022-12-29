@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>        
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>D-Tracks - 광고제작물 아카이브</title>
+		<meta name="description" content="D-Tracks - 광고제작물 아카이브">
+		<meta name="author" content="minks">
+		<link rel="shortcut icon" href="../img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="../img/logo-favicon.ico">
+		
+		<link href="../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick.css" type="text/css" rel="stylesheet">
+        <link href="../css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery-ui-timepicker-addon.css" type="text/css" rel="stylesheet">
+        <link href="../css/member-common.css" type="text/css" rel="stylesheet">
+		<link href="../css/member-main.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+        <script src="../js/slick.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery-ui-sortable.js"></script>
+        <script src="../js/jquery-ui-timepicker-addon.js"></script>
+		<script src="../js/datepicker-ko.js"></script>
+        <script src="../js/lottie-player.js"></script>
+        <script src="../js/member-function.js"></script>
+	</head>
+
+	<body>
+        <div class="wrap">
+            <!-- loading -->
+            <div class="loading-area">
+                <img src="../img/loading-img.gif" alt="로딩이미지" class="loading-img">
+            </div>
+            
+            <!-- header -->
+            <header class="header">
+                <h1 class="not-view">header</h1>
+                
+                <div class="h-main-area">
+                    <div class="center-ct">
+                        <div class="h-main-logo">
+                            <a href="index.html"><img src="../img/logo.png" alt="로고"></a>
+                        </div>
+                        
+                        <div class="h-main-search">
+                            <form id="" name="" method="" action="">
+                                <input type="text" id="" name="" class="h-main-search-input" placeholder="실시간 HOT 영상">
+                                <input type="button" class="h-main-search-btn" value="검색" onclick="location.href='ad-list.html';">
+                            </form>
+                        </div>
+                        
+                        <ul class="h-main-menu cf">
+                            <li>
+                                <a href="ad-library-list.html">AD라이브러리</a>
+                            </li>
+                            <li class="on">
+                                <a href="evaluation-list.html">심사평가</a>
+                            </li>
+                            <li>
+                                <a href="attention-list.html">관심영상</a>
+                            </li>
+                            <li>
+                                <a href="myinfo.html" class="myinfo-btn on">내정보</a>
+                            </li>
+                            <li>
+                                <button type="button" class="c-default-btn01 logout-btn" onclick="location.href='login.html';">
+                                    <span>로그아웃</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-list + c-evaluation -->
+                <section class="c-list c-evaluation">
+                    <div class="center-ct">
+                        <div class="c-list-area">
+                            <div class="c-list-top">
+                                <div class="tit">영상 심사하기</div>
+                            </div>
+                            
+                            <div class="c-list-main">
+                                <div class="evaluation-info-area">
+                                    <div class="c-table-area">
+                                        <table class="c-table">
+                                            <colgroup>
+                                                <col width="15%">
+                                                <col width="20%">
+                                                <col width="15%">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>제목</th>
+                                                    <td colspan="3" class="c-left">심사평가 1</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>심사기간</th>
+                                                    <td class="c-left">2022-06-01 ~ 2022-06-10</td>
+                                                    <th>공개기간</th>
+                                                    <td class="c-left">2022-06-20까지</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>심사내용</th>
+                                                    <td colspan="3" class="td-con c-left">
+                                                        대홍기획 오디오제작물을 평가하여 주시기 바랍니다.<br>
+                                                        평가는 3가지 항목(아이디어 독창성,브랜드 적합성,메시지 전달력)을 개별적으로 평가하여 진행하여 주시기 바랍니다.<br>
+                                                        <b>[평가기준]</b><br>
+                                                        1. 아이디어 독창성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. 브랜드 적합성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 메시지 전달력
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="evaluation-inquiry-area">
+                                    <ul class="evaluation-inquiry-list">
+                                        <li>
+                                            <div class="evaluation-inquiry-tit">
+                                                <span class="num">1</span>
+                                                [설레임X미주] 시원함이 필요한 모든 순간, 설레임_반신욕+맵부심편_15s
+                                            </div>
+                                            <div class="evaluation-inquiry-con">
+                                                <div class="evaluation-inquiry-img" style="background-image: url('../img/evaluation-detail-img1.png');" onclick="openAdDetailLayer(this);"></div>
+                                                <div class="c-table-area">
+                                                    <table class="c-table">
+                                                        <colgroup>
+                                                            <col width="*">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="c-left">
+                                                                    제작의도
+                                                                    
+                                                                    <!-- series : 시리즈 영상일 경우에만 보이기 -->
+                                                                    <div class="series">이 영상은 시리즈 영상입니다</div>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="c-left">
+                                                                    대홍기획 오디오제작물을 평가하여 주시기 바랍니다.<br>
+                                                                    평가는 3가지 항목(아이디어 독창성,브랜드 적합성,메시지 전달력)을 개별적으로 평가하여 진행하여 주시기 바랍니다.<br>
+                                                                    올 여름은 러블리한 미주처럼 시원함이 필요한 모든 순간에 설레임으로 시원하게 보내자
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="evaluation-inquiry-question">
+                                                <ul class="question-list">
+                                                    <!-- class : objective-item (객관식), subjective-item (주관식) / data-select-cnt : 객관식일 경우 옵션 최대선택 개수 -->
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q1</span>
+                                                            아이디어 독창성에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q2</span>
+                                                            브랜드 적합성에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q3</span>
+                                                            메세지 전달력에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="evaluation-inquiry-tit">
+                                                <span class="num">2</span>
+                                                [롯데제과] 마침내 제로가 맛있어지다
+                                            </div>
+                                            <div class="evaluation-inquiry-con">
+                                                <div class="evaluation-inquiry-img" style="background-image: url('../img/evaluation-detail-img2.png');" onclick="openAdDetailLayer(this);"></div>
+                                                <div class="c-table-area">
+                                                    <table class="c-table">
+                                                        <colgroup>
+                                                            <col width="*">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="c-left">
+                                                                    제작의도
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="c-left">
+                                                                    대홍기획 오디오제작물을 평가하여 주시기 바랍니다.<br>
+                                                                    평가는 3가지 항목(아이디어 독창성,브랜드 적합성,메시지 전달력)을 개별적으로 평가하여 진행하여 주시기 바랍니다.<br>
+                                                                    올 여름은 러블리한 미주처럼 시원함이 필요한 모든 순간에 설레임으로 시원하게 보내자
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="evaluation-inquiry-question">
+                                                <ul class="question-list">
+                                                    <!-- class : objective-item (객관식), subjective-item (주관식) / data-select-cnt : 객관식일 경우 옵션 최대선택 개수 -->
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q1</span>
+                                                            아이디어 독창성에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q2</span>
+                                                            브랜드 적합성에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q3</span>
+                                                            메세지 전달력에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="evaluation-inquiry-tit">
+                                                <span class="num">3</span>
+                                                [롯데주류] 생맥맛집
+                                            </div>
+                                            <div class="evaluation-inquiry-con">
+                                                <div class="evaluation-inquiry-img" style="background-image: url('../img/evaluation-detail-img3.png');" onclick="openAdDetailLayer(this);"></div>
+                                                <div class="c-table-area">
+                                                    <table class="c-table">
+                                                        <colgroup>
+                                                            <col width="*">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="c-left">
+                                                                    제작의도
+                                                                    
+                                                                    <!-- series : 시리즈 영상일 경우에만 보이기 -->
+                                                                    <div class="series">이 영상은 시리즈 영상입니다</div>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="c-left">
+                                                                    대홍기획 오디오제작물을 평가하여 주시기 바랍니다.<br>
+                                                                    평가는 3가지 항목(아이디어 독창성,브랜드 적합성,메시지 전달력)을 개별적으로 평가하여 진행하여 주시기 바랍니다.<br>
+                                                                    올 여름은 러블리한 미주처럼 시원함이 필요한 모든 순간에 설레임으로 시원하게 보내자
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="evaluation-inquiry-question">
+                                                <ul class="question-list">
+                                                    <!-- class : objective-item (객관식), subjective-item (주관식) / data-select-cnt : 객관식일 경우 옵션 최대선택 개수 -->
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q1</span>
+                                                            아이디어 독창성에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q2</span>
+                                                            브랜드 적합성에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                    <li class="subjective-item">
+                                                        <div class="question-list-tit">
+                                                            <span class="num">Q3</span>
+                                                            메세지 전달력에 대한 주관식 답을 해주세요
+                                                        </div>
+                                                        <div class="question-list-con">
+                                                            <textarea id="" name=""></textarea>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="evaluation-comment-area">
+                                    <div class="c-table-area">
+                                        <table class="c-table">
+                                            <colgroup>
+                                                <col width="*">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="c-left">코멘트</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <textarea id="" name="" placeholder="영상에 대한 코멘트를 남겨주세요."></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="evaluation-btn-area">
+                                    <button type="button" class="c-default-btn07 list-btn" onclick="location.href='evaluation-list.html';">
+                                        <span>목록</span>
+                                    </button>
+                                    <button type="button" class="c-default-btn08" onclick="openAlarmLayer('temporarySave');">
+                                        <span>임시저장</span>
+                                    </button>
+                                    <button type="button" class="c-default-btn09" onclick="openAlarmLayer('examinationCompletion');">
+                                        <span>심사완료</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- footer -->
+            <footer class="footer">
+                <h1 class="not-view">footer</h1>
+                
+                <div class="f-main-area">
+                    <div class="center-ct">
+                        <div class="f-main-info">
+                            (주)대홍기획 서울특별시 중구 통일로 10 연세세브란스빌딩 7~9층, 13층 신규광고문의 : 02.3671.6487 기타문의 : 02.3671.6114<br>
+                            © 2022 Daehong Communications INC. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+            <!-- scrollup -->
+            <div class="scrollup-area"></div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-default-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn04 close-btn" onclick="closeLayer(this);">
+                                <span>취 소</span>
+                            </button>
+                            <button type="button" class="c-round-btn03 confirm-btn">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- alarm창 -->
+                <div class="l-area" id="alarm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con-tit-area">
+                                <button type="button" class="l-con-tit-btn" onclick="closeLayer(this);">
+                                    <span><img src="../img/close-btn3.png" alt="레이어닫기"></span>
+                                </button>
+                            </div>
+                            <div class="l-default-con"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- AD상세창 열기 -->
+                <div class="l-area l-full-area" id="ad-detail-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="ad-detail-area">
+                                <div class="ad-detail-top">
+                                    <div class="tit">[설레임X미주] 시원함이 필요한 모든 순간, 설레임_반신욕+맵부심편_15s</div>
+
+                                    <!-- series : 시리즈 영상일 경우에만 보이기 -->
+                                    <div class="series">시리즈 영상</div>
+                                </div>
+
+                                <div class="ad-detail-main">
+                                    <div class="ad-detail-con1">
+                                        <div class="ad-detail-play">
+                                            <!-- ad-img-play : 이미지일 경우, data-type : 파일종류 (image), data-href : 파일경로 -->
+                                            <img src="../img/ad-detail-video-img.png" alt="동영상이미지" class="ad-img-play" data-type="image" data-href="video-img.png" onclick="openPlayLayer(this);">
+
+                                            <!-- ad-video-play-area : 동영상일 경우 -->
+                                            <!--<div class="ad-video-play-area">
+                                                <video playsinline controls class="ad-video-play" oncontextmenu="return false;">
+                                                    <source src="../img/1.mp4" type="video/mp4" />
+                                                </video>
+                                                <button type="button" class="play-btn01" onclick="setVideoPlay(this);">
+                                                    <span></span>
+                                                </button>
+                                            </div>-->
+                                        </div>
+
+                                        <div class="ad-detail-production-info">
+                                            <div class="production-info-tit">CREDITS</div>
+                                            <ul class="production-info-con">
+                                                <li>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">광고주</div>
+                                                        <div class="con">롯데칠성음료</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">브랜드</div>
+                                                        <div class="con">칠성사이다 제로</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">집행월</div>
+                                                        <div class="con">2022.05.12</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">CD</div>
+                                                        <div class="con">손수진</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">AE</div>
+                                                        <div class="con">김정훈,강진선,심영훈,김솔지,윤혜림</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">CW</div>
+                                                        <div class="con">김보경,정욱</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">AD</div>
+                                                        <div class="con">정우연,송서울</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">제작사</div>
+                                                        <div class="con">아크프로덕션</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">감독</div>
+                                                        <div class="con">비숍</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">모델</div>
+                                                        <div class="con">싸이,류이드</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">업종</div>
+                                                        <div class="con">식음료</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">집행매체</div>
+                                                        <div class="con">TVC</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">PD</div>
+                                                        <div class="con">이광현</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">AP</div>
+                                                        <div class="con">박주용,김용현</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">매체</div>
+                                                        <div class="con">박주용,김용현</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">기타</div>
+                                                        <div class="con">이본부</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">기타</div>
+                                                        <div class="con">디오포스트</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">편집실</div>
+                                                        <div class="con">VFX 픽셀</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">포스트</div>
+                                                        <div class="con">포스트테일러</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">NTC</div>
+                                                        <div class="con">남색</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">녹음실</div>
+                                                        <div class="con">음향연구소</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">오디오 PD</div>
+                                                        <div class="con">디오포스트</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">성우</div>
+                                                        <div class="con">디오포스트</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">사진[촬용]</div>
+                                                        <div class="con">디오포스트</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">인쇄부티크</div>
+                                                        <div class="con">음료</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">작화/캘리</div>
+                                                        <div class="con">듀엣콘티</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">모델에이전시</div>
+                                                        <div class="con">레디엔터테인먼트</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">조감독</div>
+                                                        <div class="con">조광모</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">Exectutive PD</div>
+                                                        <div class="con">이윤지,정현덕</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">제작사PD</div>
+                                                        <div class="con">유세유</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">플래너</div>
+                                                        <div class="con">김고운</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">촬영감독</div>
+                                                        <div class="con">김철수</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">로케이션업체</div>
+                                                        <div class="con">로케이션코리아</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">제작번호</div>
+                                                        <div class="con">22018362</div>
+                                                    </div>
+                                                    <div class="production-info-con-item">
+                                                        <div class="tit">제작비</div>
+                                                        <div class="con">
+                                                            1.7억
+                                                            <button type="button" class="production-info-btn02" onclick="openProductionCostLayer(this);">
+                                                                <span></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- bgm-item : bgm 항목일 경우 추가 -->
+                                                    <div class="production-info-con-item bgm-item">
+                                                        <div class="tit">BGM</div>
+                                                        <div class="con">
+                                                            One More Last Time (feat. Ashley Alisha)
+                                                            <button type="button" class="production-info-btn02" onclick="openBgmLayer(this);">
+                                                                <span></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="production-info-btn-area">
+                                                <!-- production-info-btn01 : 심사위원 권한일 경우 숨기기 -->
+                                                <button type="button" class="production-info-btn01" onclick="setProductionInfo(this);">
+                                                    <span></span>
+                                                </button>
+                                                <div class="trophy" onclick="openAwardLayer(this);">
+                                                    <lottie-player src="../img/trophy.json"  background="transparent" speed="0.8" loop autoplay class="anim"></lottie-player>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- ad-detail-con2 : 시리즈 영상일 경우에만 보이기 -->
+                                    <div class="ad-detail-con2">
+                                        <div class="swiper-container ad-detail-series-slide">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                                    <a href="javascript:void(0);" data-type="image" data-href="ad-detail-video-img.png" onclick="setSeriesVideo(this);">
+                                                        <div class="ad-detail-series-img" style="background-image: url('../img/ad-detail-series-img1.png');"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                                    <a href="javascript:void(0);" data-type="video" data-href="1.mp4" onclick="setSeriesVideo(this);">
+                                                        <div class="ad-detail-series-img" style="background-image: url('../img/ad-detail-series-img2.png');"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                                    <a href="javascript:void(0);" data-type="video" data-href="2.mp4" onclick="setSeriesVideo(this);">
+                                                        <div class="ad-detail-series-img" style="background-image: url('../img/ad-detail-series-img3.png');"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                                    <a href="javascript:void(0);" data-type="video" data-href="3.mp4" onclick="setSeriesVideo(this);">
+                                                        <div class="ad-detail-series-img" style="background-image: url('../img/ad-detail-series-img4.png');"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <!-- data-type : 파일종류 (image/video), data-href : 파일경로 -->
+                                                    <a href="javascript:void(0);" data-type="video" data-href="4.mp4" onclick="setSeriesVideo(this);">
+                                                        <div class="ad-detail-series-img" style="background-image: url('../img/ad-detail-series-img5.png');"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="javascript:void(0);">
+                                                        <div class="ad-detail-series-img"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="javascript:void(0);">
+                                                        <div class="ad-detail-series-img"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="javascript:void(0);">
+                                                        <div class="ad-detail-series-img"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="ad-detail-series-arrow-area">
+                                            <div class="ad-detail-series-prev-arrow"></div>
+                                            <div class="ad-detail-series-next-arrow"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 제작정보 제작비창 -->
+                <div class="l-area" id="production-cost-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area" style="background-image: url('../img/production-cost-bg.png');">
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn2.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-production-cost-con">
+                                <ul class="production-cost-list">
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 4</div>
+                                        <div class="production-cost-price">10,000,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 5</div>
+                                        <div class="production-cost-price">12,000,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 1</div>
+                                        <div class="production-cost-price">10,000,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 5</div>
+                                        <div class="production-cost-price">7,000,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 2</div>
+                                        <div class="production-cost-price">500,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 3</div>
+                                        <div class="production-cost-price">210,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 3</div>
+                                        <div class="production-cost-price">100,000</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-cost-name">제작비 상세 내역 3</div>
+                                        <div class="production-cost-price">50,000</div>
+                                    </li>
+                                </ul>
+                                <div class="production-cost-result">총 제작비용 : <span>240,000,450</span> 원</div>
+                            </div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn" onclick="closeLayer(this);">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 제작정보 BGM창 -->
+                <div class="l-area" id="bgm-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area" style="background-image: url('../img/bgm-bg.png');">
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn2.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-production-default-con">
+                                <ul class="production-default-list">
+                                    <li>
+                                        <div class="production-default-tit">곡명</div>
+                                        <div class="production-default-con">어두운 밤 감성 가득한 그루브 R&amp;B 어두운 밤 감성 가득한 그루브 R&amp;B 어두운 밤 감성</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-default-tit">제작자</div>
+                                        <div class="production-default-con">인디고 블루</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-default-tit">사용기간</div>
+                                        <div class="production-default-con">2022.01 ~ 2023.12</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-default-tit">사용료</div>
+                                        <div class="production-default-con">5,000 만원</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-default-tit">사용매체</div>
+                                        <div class="production-default-con">TVC</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-default-tit">사용지역</div>
+                                        <div class="production-default-con">드롭박스 / 국내/해외/전세계</div>
+                                    </li>
+                                    <li>
+                                        <div class="production-default-tit">사용형태</div>
+                                        <div class="production-default-con">드롭박스</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn" onclick="closeLayer(this);">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 제작정보 수상이력창 -->
+                <div class="l-area" id="award-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area" style="background-image: url('../img/award-bg.png');">
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn2.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-production-default-con">
+                                <ul class="production-default-list">
+                                    <li>
+                                        <div class="production-default-tit">수상내역</div>
+                                        <div class="production-default-con">
+                                            <ul class="production-award-list">
+                                                <li>대한민국 광고대상</li>
+                                                <li>클리오 광고제</li>
+                                                <li>칸느 국제광고제</li>
+                                                <li>칸 라이언즈 광고제</li>
+                                                <li>부산국제광고제</li>
+                                                <li>대한민국 광고대상</li>
+                                                <li>클리오 광고제</li>
+                                                <li>칸느 국제광고제</li>
+                                                <li>칸 라이언즈 광고제</li>
+                                                <li>부산국제광고제</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="c-round-btn03 confirm-btn" onclick="closeLayer(this);">
+                                <span>확 인</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+                
+                <!-- 영상재생창 -->
+                <div class="l-area l-full-area" id="play-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                <span><img src="../img/close-btn.png" alt="레이어닫기"></span>
+                            </button>
+                        </div>
+                        <div class="l-con-area">
+                            <div class="l-play-con"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-mask"></div>
+            </div>
+        </div>
+	</body>
+</html>
